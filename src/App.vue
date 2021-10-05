@@ -1,12 +1,20 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <Toolbar />
+    <b-container>
+      <router-view />
+    </b-container>
   </div>
 </template>
+
+<script>
+import Toolbar from "../src/components/Toolbar.vue";
+export default {
+  components: {
+    Toolbar,
+  },
+};
+</script>
 
 <style>
 #app {
